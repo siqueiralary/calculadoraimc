@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Megrim&family=Monsieur+La+Doulaise&family=Nova+Mono&family=Reggae+One&family=Vast+Shadow&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>IMC (Índice de Massa Corporal)</h1>
+
+        <label for="peso">Peso (kg)</label>
+        <input type="number" name="peso" id="peso">
+        <br><br>
+
+        <label for="altura">Altura (cm)</label>
+        <input type="number" name="altura" id="altura">
+        <br><br>
+
+        <button onclick="CalcularImc()">Calcular IMC</button>
+        <br><br>
+
+        <p>Seu índice de massa corporal é... <span id="resultado"></span></p>
+
+        <script type="text/javascript">
+            function CalcularImc() {
+                const peso = document.getElementById("peso").value;
+                const altura = document.getElementById("altura").value;
+                const imc = peso / (altura ** 2)
+                document.getElementById("resultado").textContent = imc.toFixed(2)
+            }
+        </script>
+    </div>
+
+    <footer>
+        <small>
+            &copy; All rights reserved - Laryssa Siqueira | <a href="https://wa.me/qr/EXL4WH52COY2P1">CONTATO</a>
+        </small>
+    </footer>
+
+</body>
+</html>
